@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiace Booking System</title>
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Hiace Booking</h1>
+    </header>
+    <main>
+        <section class="hiace-image">
+            <img src="hiace.jpg" 30px; alt="Hiace" id="hiaceImage">
+        </section>
+        <section class="booking-form">
+            <h2>Book Your Ride</h2>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="phone number">phone number:</label>
+                <input type="phone number" id="phone number" name="phone number" required>
+                
+                <label for="pickup">Pickup Point:</label>
+                <select id="pickup" name="pickup" required>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+                
+                <label for="drop">Drop Point:</label>
+                <select id="drop" name="drop" required>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+                
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+                
+                <label for="seat">Select Seat:</label>
+                <select id="seat" name="seat" required>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+                
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+        <section class="seat-map">
+            <h2>Seat Map</h2>
+            <div id="seats">
+                <!-- Seat map will be populated by JavaScript -->
+            </div>
+        </section>
+        <section class="booking-list">
+            <h2>Your Bookings</h2>
+            <ul id="bookings">
+                <!-- Bookings will be listed here -->
+            </ul>
+        </section>
+        <section class="map">
+            <h2>District Map</h2>
+            <div id="map" style="height: 500px;"></div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>
